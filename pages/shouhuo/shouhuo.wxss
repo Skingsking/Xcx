@@ -1,0 +1,370 @@
+.dingdan{
+  width: 100%;
+  background: #eee;
+  margin-bottom: 55px;
+}
+
+.dizhi{
+  width: 100%;
+  display: flex;
+  justify-content:flex-start ;
+   flex-wrap: wrap ;
+   background: white;
+   border-top: 1px solid #999;
+   margin-bottom: 1rem;
+   
+}
+.dizhi .dztb{
+  width: 10%;
+    
+}
+.dizhi .dztb image{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 1rem; 
+  margin-top: 1rem;
+ }
+ .dhdz{
+  display: flex;
+  width: 90%;
+  height: 1.5rem;
+} 
+.dhdz .dz{
+  width: 50%;
+ 
+  margin-left: 1rem;
+  font-size: 15px;
+  line-height: 1.5rem;
+  color: #999;
+   margin-top: 0.5rem;
+
+}
+.dhdz .dh{
+  width: 40%;
+ font-size: 15px;
+   line-height: 1.5rem;
+   color: #999;
+   margin-top: 0.5rem;
+  
+}
+.dhdz .jt{
+  width: 10%;
+  line-height: 3rem;
+   color: #999;
+  
+}
+.shdz{
+ 
+  width: 79%;
+ margin-left: 3rem;
+  font-size: 15px;
+  /*超出自动换行  */
+  word-break:break-all;
+  justify-content: center ;
+  margin-bottom: 0.5rem;
+
+  
+}
+
+.shdz text{
+  color: #999;
+}
+.zffs {
+  background: white;
+  width: 100%;
+  display: flex;
+  height: 2.5rem;
+  /* margin-bottom: 1rem; */
+  border-bottom: 1px solid #999;
+}
+.zffs .fs{
+  font-size: 15px;
+  
+  width: 66%;
+  margin-left: 1rem;
+  line-height: 2.5rem;
+
+}
+.zffs .zf{
+  font-size: 15px;
+  color: #999;
+  width: 20%;
+  
+  line-height: 2.5rem;
+}
+.zffs  .jt{
+  color: #999;
+  line-height: 2.5rem;
+  
+}
+/*店铺购买信息  */
+.gmxx{
+  width: 100%;
+  margin-top: 1rem;
+}
+.dpmc{
+  width: 100%;
+  background: white;
+  height: 2.5rem;
+  border-bottom: 1px solid #999;
+}
+.dpmc text{
+  line-height: 2.5rem;
+  font-size: 17px;
+  margin-left: 1rem;
+}
+/*tp  */
+.dpzp{
+  width: 100%;
+  background: white;
+  height: 7rem;
+  display: flex;
+  border-bottom: 1px solid #999;
+}
+.dptt{
+  width: 66%;
+  height: 7rem;
+
+
+}
+.dptt image{
+  width: 5rem;
+  height: 5rem;
+  line-height: 8rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  
+}
+.dssp{
+  width: 34%;
+
+}
+.dssp  .spsl{
+  line-height: 7rem;
+  font-size: 15px;
+  color: #999;
+}
+.dssp  .jt{
+  color: #999;
+ margin-left: 2.5rem;
+}
+
+.liuy {
+  background: white;
+  width: 100%;
+  display: flex;
+  height: 2.5rem;
+  /* margin-bottom: 1rem; */
+  border-bottom: 1px solid #999;
+}
+.liuy .lyfs{
+  font-size: 15px;
+  width: 25%;
+  margin-left: 1rem;
+  line-height: 2.5rem;
+
+}
+.liuy .shuru{
+  
+  color: #999;
+  width: 75%;
+  margin-top: 0.5rem;
+  font-size: 13px;
+  
+}
+
+.fy{
+  width: 100%;
+  background: white;
+  display: flex;
+  
+ 
+}
+.fy .hjs{
+  width: 65%;
+
+  text-align: right;
+
+}
+.fy .hj{
+
+  width: 35%;
+}
+.fy .hjs .hjwz{
+  color: #999;
+  font-size: 13px;
+  margin-right: 2rem;
+}
+
+.fy .hj .hjjg{
+  
+  color: red;
+  font-size: 14px;
+}
+
+.fy .hj .hjjgs{
+  
+  color: #999;
+  font-size: 14px;
+}
+
+
+
+
+.fys{
+  width: 100%;
+  background: white;
+  display: flex;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #999;
+  
+ 
+}
+.fys .hjs{
+  width: 65%;
+
+  text-align: right;
+
+}
+.fys .hj{
+
+  width: 35%;
+}
+.fys .hjs .hjwz{
+  color: #999;
+  font-size: 13px;
+  margin-right: 2rem;
+}
+
+.fys .hj .hjjg{
+  
+  color: red;
+  font-size: 14px;
+}
+
+.fys .hj .hjjgs{
+  
+  color: #999;
+  font-size: 14px;
+}
+.address-add {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: white;
+  display: flex;
+  height: 3rem;
+  border-top: 1px  solid #cdcdcd;
+}
+.address-add .zjg{
+  width: 60%;
+  margin-right: 1rem;
+ text-align: right;
+}
+ .zjg .hjj{
+  line-height: 49px;
+ }
+ .zjg .jg{
+  line-height: 49px;
+  color: red;
+ }
+ .address-add .js{
+   width: 40%;
+ }
+ .address-add .js .jsbtn{
+   background: red;
+   color: white;
+     border-radius: 0;
+     line-height: 49px;
+ }
+
+
+/*  */
+page {  
+  min-height: 100%;  
+  background-color:#f6f6f6;
+  font-family: "微软雅黑";
+  font-size: 30rpx;
+  color:#353535;
+  width:100%;
+} 
+.section{
+	background-color: white;
+  border-bottom:1px solid #999;
+  margin-bottom: 1rem;
+
+}
+.item{
+	display: flex;
+	justify-content: space-between;
+	margin-left:30rpx;
+	padding:5rpx 30rpx 5rpx 0;
+	line-height:90rpx;
+	border-bottom:1rpx solid #e0e0e0;
+}
+.addre1{
+	margin-left:30rpx;
+    display: flex;
+    justify-content: space-between;
+    padding-top:30rpx;
+	line-height:100rpx;
+}
+.addre2{
+   line-height:60rpx;
+   font-size:27rpx;
+}
+.addre2 .left{
+	display: flex;
+	flex-direction: column;
+	width:90%;
+}
+.addre2 .left .area{
+	float:right;
+}
+.addre2 .left_bottom{
+	padding-left:45rpx;
+	color:#888;
+  font-size: 14px;
+}
+.left_top image{
+	padding-top:10rpx;
+margin-right:10rpx;
+height:20px;
+width:40rpx;
+
+}
+.left_top  .xm{
+  font-size:14px;
+
+}
+.left_top  .bm{
+  display: none;
+}
+.left_top  .dh{
+  font-size:14px;
+  margin-left: 5rem;
+}
+.more{
+  width:25rpx;
+  float:right;
+  margin-right:35rpx;
+  padding-top:40rpx;
+}
+ image{
+	width:30rpx;
+}
+.line image{
+	width:100%;
+	height:20rpx;
+}
+.red{
+	color:#e64340;
+   font-size: 15px;
+}
+.gray{
+	color:#939393;
+ 
+}
+.right{
+	display:flex;
+}

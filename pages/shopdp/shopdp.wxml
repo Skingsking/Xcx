@@ -1,0 +1,354 @@
+<view class="shopbj">
+
+  <view class="shoptu" >
+    <!--是否显示圆点，自动播放， 间隔时间， 监听滚动和点击事件  监听事件没有绑定-->
+    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="500" bindchange="listenSwiper">
+      <!--通过wx-for循环 引用图片  -->
+      <!--核心代码就是 wx:for，对应一个数组。
+而 wx:for-index 指明后面如果要用数组索引的话，用什么名字，如果名字是 index，则可省略，直接使用。
+而 wx:for-item 指明后面如果要用数组索引对应的项的话，用什么名字，如果名字是 item，则可省略，直接使用。  -->
+      <block wx:for="{{movies}}" wx:for-index="index" wx:for-item="aaa">
+        <swiper-item data-post="{{index.postid}}">
+          <image src="{{aaa.url}}" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+      </block>
+
+    </swiper>
+
+  </view>
+  <!--轮播结束  -->
+
+  <!--测试wxfor  -->
+  <!-- <view wx:for="{{items}}" wx:for-index="index" wx:for-item="item" >
+      {{index+1}}、{{item.title}}
+    </view>  -->
+
+
+  <!--商品信息  -->
+  <view class="shopxx">
+    <view class="shopxxs">
+      <text>梭织春夏贡丝锦男女工装面料幅宽150cm5米开剪现货</text>
+    </view>
+    <view class="shopxxb">
+      <view class="shopxxz">
+        <text>￥23.70</text>
+      </view>
+      <view class="shopxxy">
+        <text>货号：</text>
+        <text>456456</text>
+      </view>
+    </view>
+  </view>
+  <!--商品信息结束  -->
+
+<form>
+<!--商品规格  -->
+<view class="spggts">
+
+<view bindtap="listenerButton" class="tck">
+    <view class="xznr">
+      <text>已选</text>
+    </view>
+    <view class="spgg">
+      <text class="xzgg">请选择商品规格</text>
+      <text class="ggjt">></text>
+    </view>
+
+</view>
+
+
+
+<!--提示信息  -->
+
+ <view class="yffh">
+ 
+  <view class="tsxx">
+      <text>提示</text>
+  </view>
+  <view class="yffhdd">
+    <view class="yf">
+            <text class="yun">运费：</text>
+              <text class="yfje">到付</text>
+            
+        </view>
+        <view class="fh">
+            <text class="fhd">发货地：</text>
+            <text class="dz">柯桥</text>
+        </view>
+  </view>
+      
+  </view>
+
+  <!--图文详情  -->
+    <view class="texq" bindtap="shopms">
+        <text class="tw">图文详情</text>
+        
+         <text class="jt">></text>
+       
+       
+    </view>
+
+</view>
+  <!--弹出框  -->
+
+  <!--触发action-sheet事件 选择商品规格-->
+  
+  <!--默认action-sheet为隐藏，由button触发-->
+  <!--bindchange 左右滑动的时候会结束这个事件  -->
+  <view class="tcspxx">
+    
+      <action-sheet hidden="{{actionSheetHidden}}" bindchange="listenerActionSheet">
+        <!-- <view>
+    <action-sheet-cancel style="width:10rpx;background:red;">
+     <text>X</text>
+     </action-sheet-cancel>
+  </view> -->
+
+        <!--图文价格  -->
+        <view class="tcxpnr">
+          <view class="tcxp">
+            <view class="tcdw">
+              <image src="http://www.jinyisoubu.com/images/6f/8f/30/79028babcc1a7fc9ba5af047a08b95989327cb16.JPG_t.JPG"></image>
+            </view>
+          </view>
+
+          <view class="tcwz">
+            <text class="tcjg">￥25.00/m</text>
+            <view class="wzgg">
+              <text>请选择商品规格</text>
+            </view>
+          </view>
+
+          <action-sheet-cancel class="qxan">X</action-sheet-cancel>
+        </view>
+
+        <!--颜色 销售方式 销售类型-->
+        <!-- 那个数据是和这个绑定的 -->
+        <!-- 你要做到的功能就是点击的时候改变颜色 -->
+        <!-- 那个这个颜色的calss是根据什么来判断的那 -->
+        <!-- txtArray.changeColor 就是根据这个来改变的 -->
+        <view class="tccolor">
+          <!--颜色  -->
+          <view class="tcysfl">
+            <view class="tcyans">
+              <text>颜色</text>
+            </view>
+
+          <view class="yansexz">
+
+            <block wx:for="{{txtArray}}"  >
+             <!-- 根据changeColor这个来改变颜色对吧 -->
+             <!-- 那么这个样式是根据这个来判断的话  我的事件是不是只需要来对 txtArray.changeColor来操作就可以完成样式改版了 -->
+             <!-- 但是你在js里面怎么能找到这个你点击的这个按钮绑定的数据那 -->
+             <!-- changeColor这个事件是不是应该吧你绑定的数据传过去 -->
+            
+              <view id="{{item.id}}" class="{{item.changeColor ==true? 'selected':'normal'}}" bindtap="changeColor" data-itme ="{{item}}">{{item.txt}}</view>
+              <!-- <view id="{{item.id}}" class="{{item.changeColor?'selected':'normal'}}" bindtap="changeColor">{{item.txt}}</view> -->
+            </block>
+
+             </view>
+
+          </view>
+
+
+          <!--销售方式  -->
+          <view class="tcxsfs">
+            <view class="tcxs">
+              <text>销售方式</text>
+            </view>
+
+
+        <view class="xsfss">
+           <block wx:for="{{txtArrayxs}}">
+              <text id="{{item.id}}" class="{{item.changeColorxs ==true?'selectedxs':'normalxs'}}" bindtap="changeColorxs" data-itme ="{{item}}">{{item.txt}}</text>
+              
+             </block>
+        </view>
+         
+          </view>
+
+          <!--销售类型  -->
+
+          <view class="tcxslx">
+            <view class="tcxslxjx">
+              <text>销售类型</text>
+            </view>
+
+          <view class="xslxx">
+           <block wx:for="{{txtArrayxslx}}">
+              <text id="{{item.id}}" class="{{item.changeColorxslx ==true?'selectedxslx':'normalxslx'}}" bindtap="changeColorxslx" data-itme ="{{item}}">{{item.txt}}</text>
+              
+             </block>
+         </view>
+
+         
+          </view>
+
+
+
+        </view>
+
+
+        <!--输入数量  -->
+        <view class="srsl">
+          <view class="srspsl">
+            <text>商品数量</text>
+          </view>
+
+          <view class="stepper">
+            <!-- 减号 -->
+            <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+            <!-- 数值 -->
+            <input type="number" bindchange="bindManual" value="{{num}}" />
+            <!-- 加号 -->
+            <text class="normal" bindtap="bindPlus">+</text>
+          </view>
+        </view>
+
+
+
+        <!--加入购物车和立即购买  -->
+        <view class="gwgm">
+          <view class="gw" bindtap="currss">
+            <button>加入购物车</button>
+          </view>
+          <view class="gm" bindtap="modalcnt" >
+            <button type="defaule">立即购买</button>
+          </view>
+        </view>
+
+
+
+
+
+
+        <!--自动隐藏action-sheet-->
+
+      </action-sheet>
+   
+  </view>
+  <!--弹出框结束  -->
+
+
+<!--店铺名字  -->
+    <view class="dpzhz">
+        <view class="dpmz">
+              <view class="dptps">
+                <image src="http://www.jinyisoubu.com/images/b7/b7/38/cf5734131153189120ef0d941e3ed0b68b85e9c7.jpg" mode="widthFix"></image>
+              </view>
+
+                  <view class="dpmcs">
+                    <text>星派面辅料超市(郑州馆)</text>
+                        <view class="dpxxs">
+                          <image src="../../images/ico/solid.png"></image>
+                          <image src="../../images/ico/solid.png"></image>
+                          <image src="../../images/ico/solid.png"></image>
+                          <image src="../../images/ico/solid.png"></image>
+                          <image src="../../images/ico/solid.png"></image>
+                        </view>
+                  </view>
+           </view>
+
+           <!--按钮样式-->
+           <view class="anys">
+              <view class="scdp">
+                <button class="sc">收藏店铺</button>
+              </view>
+               <view class="jrdp">
+                <button class="jr" bindtap="toasts" >进入店铺</button>
+              </view>
+           </view>
+
+          
+    </view>
+<!--店铺名字结束  -->
+ </form>
+
+
+
+
+<!-- <view class="button" bindtap="toggle">点击切换到{{type}}版 -->
+
+
+<!-- </view> -->
+
+
+</view>
+
+  <!--下面固定内容  -->
+<view   class="address-add">
+
+<view class="szzt">
+
+<!--收藏  -->
+<view class="box1 sc"bindtap="toggle" wx:if="{{type=='收藏'}}">
+      
+          <view class="tpxx">
+          <image class="sctp" src="../../images/ico/find-Gray.png"></image>
+          </view>
+     
+          <view class="scnr"> 
+             <text class="scwz">收藏</text> 
+            
+          </view> 
+      
+</view>
+<view class="box2 sc"bindtap="toggle" wx:if="{{type=='已收藏'}}">
+  <view class="tpxx">
+          <image class="sctp" src="../../images/ico/find-Red.png"></image>
+          </view>
+     
+          <view class="scnr"> 
+             <text class="scwzs">已收藏</text> 
+            
+          </view> 
+
+</view>
+    <!-- <view class="sc">
+
+
+
+    
+    </view> -->
+
+<!--试衣  -->
+      <view class="scsy">
+
+            <view class="tpxxsy">
+            <image class="sctpsy" src="../../images/ico/index-Gray.png"></image>
+            </view>
+     
+            <view class="scnrsy"> 
+              <text class="scwzsy">试衣</text>
+            </view> 
+      
+    
+     </view>
+
+    <!--购物车  -->
+     <view class="scgw" bindtap="shopche">
+
+            <view class="tpxxgw">
+            <image class="sctpgw" src="../../images/ico/cart-Gray.png"></image>
+            </view>
+     
+            <view class="scnrgw"> 
+              <text class="scwzgw">购物车</text>
+            </view> 
+            
+    
+      </view>
+</view>
+
+      <!--按钮  -->
+      <view class="gwgms">
+          <view class="gws" bindtap="listenerButton">
+              <button>加入购物车</button>
+          </view>
+          <view class="gms" bindtap="listenerButton">
+              <button>立即购买</button>
+          </view> 
+        
+      </view>
+
+</view>

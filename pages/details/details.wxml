@@ -1,0 +1,29 @@
+<view>
+    <text>用户名</text> 
+    <!--引用的为 名字-->
+    
+    <!--自带的那些属性-->
+    <input id="myInput" bindblur="bindBlur" class="inpu" />
+
+   <span style="font-size:24px;">    
+  
+<view style="text-align:center"> {{title}} </view>
+  <view style="text-align:center"> {{id}} </view>
+  
+  </span>   
+
+
+
+
+ </view> 
+
+
+ 
+<view style="flex-direction:row;"wx:for="{{Industry}}">  
+<view>  
+({{index}}){{item.date}} {{item.high}} {{item.low}}  {{item.sunset}}
+{{item.notice}}  
+</view>  
+</view>  
+  
+<view hidden="{{isshow}}">数据加载完成</view>  

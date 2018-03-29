@@ -1,0 +1,77 @@
+ <!-- 信息部分开始  -->
+ <form bindsubmit="formSubmit" report-submit="true">
+<view class = "info">
+<!-- 姓名部分 -->
+ <view class = "item">
+<text>收件人:</text>
+<view class = "right">
+<input type="text" name = "name"placeholder="{{name}}" focus="{{focus}}"/>
+</view>
+</view> 
+
+<!-- 电话部分 -->
+ <view class = "item">
+<text>手机号码:</text>
+<view class = "right">
+<input name="tel" type="number" placeholder="{{tel}}"  focus="{{focus}}"/>
+</view>
+</view>
+<!--邮政编码  -->
+ <view class = "item">
+<text>邮政编码:</text>
+<view class = "right">
+<input name="bm" type="number" placeholder="{{bm}}"  focus="{{focus}}"/>
+</view>
+</view> 
+
+
+<!-- 收货地址部分 -->
+ <view class = "item">
+<text>所在地区:</text>
+<view class = "right">
+<!-- <picker name="addre" class = "addre" value="{{addreValue}}" range="{{addreRange}}" bindchange="addrePickerBindchange">
+ {{addreRange[addreValue]}}
+</picker> -->
+<picker mode="region" bindchange="bindRegionChange" value="{{region}}" name="region" focus="{{focus}}">
+    
+      {{region[0]}}，{{region[1]}}，{{region[2]}}
+    
+  </picker>
+
+</view>
+</view> 
+
+<!-- 详细地址部分 -->
+ <view class = "item">
+<text>街道地址:</text>
+<view class = "right">
+<input name="door" type="text" placeholder="{{door}}"  focus="{{focus}}"/>
+</view>
+</view>  
+
+<!-- 房屋面积部分 -->
+<!-- <view class = "item">
+<text>房屋面积</text>
+<view class = "right">
+<picker name = "area" class = "area" value="{{areaValue}}" range="{{areaRange}}" bindchange="areaPickerBindchange">
+ {{areaRange[areaValue]}}
+</picker>
+<text>　㎡</text>
+<text class = "remind">(以便自动计算保洁时间和服务人数)</text>
+
+</view>
+</view> -->
+
+
+
+ </view> 
+<!-- 信息部分结束 -->
+<button class = "save" formType="submit" >保存</button>
+</form> 
+
+
+
+
+
+
+

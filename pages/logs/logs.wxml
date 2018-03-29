@@ -1,0 +1,26 @@
+<view>
+<!-- <view>
+<view>Hello {{name}}!</view>
+    <!-- bindtap 点击事件 -->
+    <!-- <button bindtap="changeName">点击我，换名字</button>
+</view> -->
+
+<!--登录状态  -->
+ <view class="dlbj">
+    <view class="dlzh" >
+     <text class="nh">您好,797997989></text>
+    </view>
+    <view class="dlhy">
+    <view class="hg" >
+    <image src="../../images/ico/hg.png"  class="hgtp"></image>
+      <text class="dlwz"  >普通会员</text>
+    </view>
+        
+      
+    </view>
+</view> 
+
+
+
+
+</view>

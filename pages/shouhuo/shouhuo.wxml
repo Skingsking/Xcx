@@ -1,0 +1,226 @@
+<view class="dingdan">
+    <form action="">
+        <view class="jiesuan">
+            <!--地址信息开始  -->
+                <!-- <view class="dizhi" bindtap="shdz">
+                    <view class="dztb">
+                      <image src="../../images/ico/dizhi.png"></image>
+                    </view>
+
+                    <view class="dhdz">
+                        <view class="dz"> {{name}}</view>
+                        <view class="dh">{{tel}}</view>
+                        <view class="jt">></view>
+
+                    </view>
+
+                    <view class="shdz">
+                      <text>{{addre}}</text>
+                     
+                    </view>
+                </view> -->
+<view class = "section">
+<view class = "addre1" bindtap = "toChooseAddre" style="display:{{display1}} ">
+  <view class = "left">
+  
+   <text class = "red">　选择您的地址</text>
+  </view>
+  <view class = "right">
+       <image class="more" src = "../../images/ico/right.png" 
+    mode = "widthFix" /> 
+  </view>
+  </view>
+
+ 
+
+<view class = "addre1 addre2" bindtap = "toChooseAddre"  style="display:{{display2}} "  >
+
+  <view class = "left">
+  <view class="left_top">
+   <image src="../../images/ico/map2.png" 
+    mode = "widthFix"/> 
+   <input type="hidden" class="bm">{{bm}}</input>
+    <text class="xm">{{name}}</text>  
+    <text class="dh">{{tel}}</text>  
+    　　　
+    </view>
+    <view class = "left_bottom">
+     {{region}}{{door}}
+    </view>
+  </view>
+  <view class = "right">
+    
+  </view>
+</view>
+
+<view class = "line"></view>
+
+
+
+<!-- 
+<view class = "item">
+  <view class = "left">
+    服务时间
+  </view>
+  <view class = "right">
+    <picker name="date" mode="date" value="{{dateValue}}" start="2017-05-19" end="2100-12-12" bindchange="datePickerBindchange">
+  {{dateValue}}
+</picker>
+　|　
+<picker name="time" mode="time" value="{{timeValue}}" start="08:00" end="18:00" bindchange="timePickerBindchange">
+  {{timeValue}}
+  </picker>
+  </view> -->
+<!-- </view>
+
+
+<view class = "item">
+  <view class = "left">
+    可选服务
+  </view>
+  <view class = "right">
+  <checkbox-group name ="marks">
+     <label class="checkbox" wx:for="{{marks}}">
+    <checkbox value="{{item.name}}" checked="{{item.checked}}" color="#FFC800"/>{{item.value}}
+  </label>
+  </checkbox-group>
+  </view>
+</view> -->
+
+
+<!-- <view class = "mark">
+  <view>备注</view>
+  <view class = "mark_content">
+    <textarea name= "comment" value="{{comment}}"></textarea>
+  </view>
+</view> -->
+
+</view> 
+<!-- <button class = "submit"  formType="submit">立即预约</button> -->
+
+            <!--地址信息结束  -->
+           
+           <!--支付方式开始  -->
+            <view class="zffs">
+                <view class="fs">支付方式：</view>
+                <view class="zf">自提</view>
+              
+            </view>
+           <!--支付方式结束  -->
+
+           <!--店铺购买信息开始  -->
+              <view class="gmxx">
+                  <view class="dpmc">
+                      <text>星派面辅料超市（郑州馆）多品类 </text>
+                  </view>
+
+
+              <view class="dpzp">
+                  <view class="dptt">
+                      <image src="http://www.jinyisoubu.com/images/56/7d/cb/a74553ffeeb3899fe2ab401852fbd304a478380f.jpg_t.jpg"></image>
+                  </view>
+
+                  <view class="dssp">
+                      <text class="spsl">共</text ><text class="spsl">2</text><text class="spsl">件</text>
+                      <!-- <text class="jt">></text> -->
+                  </view>
+              </view>
+
+
+                 <view class="zffs">
+                <view class="fs">配送方式：</view>
+                <view class="zf">快速配送</view>
+                <!-- <view class="jt">></view> -->
+            </view>
+
+
+
+               <view class="zffs">
+                <view class="fs">优惠券：</view>
+                <view class="zf">不使用</view>
+                <!-- <view class="jt">></view> -->
+            </view>
+
+            <!--买家留言  -->
+              <view  class="liuy">
+               <view class="lyfs">买家留言：</view>
+             <input class="shuru" placeholder="选填：内容已经和商家达成一致意见"></input>
+              
+              </view>
+
+
+
+   
+
+                      
+                      <view class="fy">
+                        
+
+
+                        <view class="hjs">
+                          <text class="hjwz">合计：</text>
+                        </view>
+                          <view class="hj">
+                              <text class="hjjg">￥<text>160.00</text></text>
+                          </view>
+
+                      </view>
+
+                      <view class="fy">
+                        
+
+
+                        <view class="hjs">
+                          <text class="hjwz">减免：</text>
+                        </view>
+                          <view class="hj">
+                              <text class="hjjgs">￥<text>1600.00</text></text>
+                          </view>
+
+                      </view>
+
+                      <view class="fys">
+                        
+
+
+                        <view class="hjs">
+                          <text class="hjwz">运费：</text>
+                        </view>
+                          <view class="hj">
+                              <text class="hjjgs">￥<text>1600.00</text></text>
+                          </view>
+
+                      </view>
+
+   
+
+          
+              </view>
+
+           <!--店铺购买信息结束  -->
+
+           
+
+        
+        </view>
+
+
+
+              <!--底部  -->
+        <view   class="address-add">
+            <view class="zjg">
+                <text class="hjj">合计：</text>
+                <text class="jg">16.00</text>
+            </view>
+
+            <view class="js">
+              <button class="jsbtn">结算</button>
+            </view>
+
+          </view>
+    </form>
+
+
+
+
+</view>

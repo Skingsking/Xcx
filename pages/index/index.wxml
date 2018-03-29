@@ -1,0 +1,152 @@
+<view class="zynr">
+  <!--背景开始  -->
+  <view class="bjlg">
+    <view class="tcyy"></view>
+    <view class="bjtp">
+      <image src="{{shop_logo}}" mode="widthFix"></image>
+    </view>
+    <view class="dpnr">
+      <view class="dptp">
+        <image src="{{shop_logodp}}" mode="widthFix"></image>
+      </view>
+
+      <view class="dpmc">
+        <text>{{shop_name}}</text>
+        <view class="dpxx">
+          <image src="../../images/ico/solid.png"></image>
+          <image src="../../images/ico/solid.png"></image>
+          <image src="../../images/ico/solid.png"></image>
+          <image src="../../images/ico/solid.png"></image>
+          <image src="../../images/ico/solid.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!--滚动条  -->
+  <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex" class="gdt">
+    <!--  display: inline-block-->
+
+    <view class="gdnr" bindtap="aaass">店铺首页</view>
+    <view class="gdnr">全部商品</view>
+    <view class="gdnr">针织</view>
+    <view class="gdnr">梭织</view>
+    <view class="gdnr">化纤</view>
+    <view class="gdnr">棉纺</view>
+    <view class="gdnr">麻纺</view>
+  </scroll-view>
+
+  <!--二层循环  -->
+  <view class="pad10" wx:for="{{twoList}}">
+    <view>
+      {{index+1}}、{{item.name}}
+    </view>
+    <view wx:for="{{item.twodata}}" wx:for-item="twodata">
+      ----{{twodata.name}}---{{twodata.name}}
+    </view>
+  </view>
+
+
+
+  <!--轮播图  -->
+  <view bindtap="toast">
+    <!--是否显示圆点，自动播放， 间隔时间， 监听滚动和点击事件  监听事件没有绑定-->
+    <swiper indicator-dots="true" autoplay="true" interval="3000" duration="500" bindchange="listenSwiper" wx:for="{{slider}}">
+
+      <swiper-item>
+        <image src="{{item.sliderImage}}" mode="widthFix" class="slide-image" width="355" height="150" />
+      </swiper-item>
+
+      <!-- <swiper-item>
+        <image src="http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg" class="slide-image" width="355" height="150" />
+      </swiper-item>
+
+
+      <swiper-item>
+        <image src="http://img04.tooopen.com/images/20130617/tooopen_21241404.jpg" class="slide-image" width="355" height="150" />
+      </swiper-item>
+
+      <swiper-item>
+        <image src="http://img04.tooopen.com/images/20130701/tooopen_20083555.jpg" class="slide-image" width="355" height="150" />
+      </swiper-item>
+
+
+      <swiper-item>
+        <image src="http://img02.tooopen.com/images/20141231/sy_78327074576.jpg" class="slide-image" width="355" height="150" />
+      </swiper-item> -->
+    </swiper>
+  </view>
+  <!--轮播图结束  -->
+
+  <!--商品内容  -->
+
+  <view>
+
+    <!--开头 引入的为 在js中获取到的链接-->
+    <block wx:for="{{showitems}}">
+      <view style='overflow:hidden '>
+        <view class="bttitss">{{item.params.tagsname}}</view>
+        <!--使用 navigatorgator 获取到 另外一个 文件的内容 -->
+        <!-- <navigator url="/pages/details/details"> -->
+
+        <view class="zxq" wx:for="{{item.params.itemlist.list}}" wx:for-item="list">
+          <!--遍历循环的图片内容-->
+
+          <view>
+
+            <image src="{{list.image_default_id}}" class="imgsss" bindtap="shop"></image>
+            <view class="wznr">
+              <text class="wznrtxt">{{list.title}}</text>
+            </view>
+
+            <view class="zspjg">
+              <text>￥{{list.price}}</text>
+              <text class="gmjg">已有<text>{{list.sold_quantity}}</text>人购买</text>
+            </view>
+
+          </view>
+
+        </view>
+      </view>
+      <!-- </navigator> -->
+    </block>
+  </view>
+  <!--商品内容结束  -->
+
+
+
+
+
+
+  <!--通过定义跳转 直接传参  -->
+  <span style="font-size:24px;">
+    <view class="btn-area">
+      <navigator url="../merchant/merchant?title=我是4556465464navigate">跳转到新页面</navigator>
+      <navigator url="../details/details?title=我是redirect" redirect>在当前页打开</navigator>
+    </view>
+  </span>
+
+
+
+
+
+
+
+
+
+
+  <!-- <scroll-view scroll-y style="height: 1000rpx;" scroll-top="50" enable-back-to-top="true" scroll-top="{{scrollTop.scroll_top}}" bindscroll="scrollTopFun">
+<block wx:for="{{sortArr}}">
+<template is="spL" data="{{item}}"></template>
+</block>
+</scroll-view>  -->
+  <!-- 联系客服 -->
+  <!-- <view class="findOur fliexBox"><contact-button type="default-light" size="15" session-from="weapp"></contact-button>客服</view> -->
+  <!-- 拨打电话 -->
+  <!-- <view class="callOur fliexBox" bindtap="call">电话</view>
+<view class="fliexBox" style=" bottom: 150rpx; border: solid 1px green;" wx:if="{{scrollTop.goTop_show}}" catchtap="goTopFun">顶层</view> -->
+
+
+
+
+</view>

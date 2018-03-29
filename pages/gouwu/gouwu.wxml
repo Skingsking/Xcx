@@ -1,0 +1,54 @@
+<view class="main">
+    <view wx:if="{{hasList}}">
+
+    <!--购物车商品内容开始  -->
+        <view class="cart-box">
+            <view class="cart-list" wx:for="{{carts}}" wx:key="{{index}}">
+            <!--前面圆头图标  -->
+                <icon wx:if="{{item.selected}}" type="success" color="red" data-index="{{index}}"  class="cart-pro-select" bindtap="selectList"/>
+                <icon wx:else type="circle" class="cart-pro-select" data-index="{{index}}" bindtap="selectList"/>
+                <!--点击跳转的链接 传入id值 -->
+                <navigator url="../details/details?id={{item.id}}"><image class="cart-thumb" src="{{item.image}}"></image></navigator>
+                <!--获取商品内容  -->
+           
+                 <view class="cart-pro-name">{{item.title}}</view>
+                 <!-- <view class="gzlx"> -->
+                  <text class="ys">颜色:</text><text class="yslx">{{item.ys}}</text>
+                   <text class="ys">销售方式:</text><text class="yslx">{{item.fs}}</text>
+                    <text class="ys">销售类型:</text><text class="yslx">{{item.lx}}</text> 
+                 <!-- </view> -->
+               
+                <!--获取价格  -->
+                <view class="cart-pro-price">￥{{item.price}}</view>
+              
+               
+                <!--增加加减内容  -->
+                <view class="cart-count-box">
+                    <text class="cart-count-down" bindtap="minusCount" data-obj="{{obj}}" data-index="{{index}}">-</text>
+                    <text class="cart-count-num">{{item.num}}</text>
+                    <text class="cart-count-add" bindtap="addCount" data-index="{{index}}">+</text>
+                </view>
+                <!--点击删除按钮  -->
+                <text class="cart-del" bindtap="deleteList" data-index="{{index}}">×</text>
+            </view>
+        </view>
+        <!--购物车商品内容结束  -->
+
+        <view class="cart-footer">
+       
+            <icon wx:if="{{selectAllStatus}}" type="success_circle" color="#fff" class="total-select" bindtap="selectAll"/>
+            <icon wx:else type="circle" color="#fff" class="total-select" bindtap="selectAll"/>
+         
+            <!--结算价格  -->
+            <text>全选</text>
+            <text class="cart-toatl-price">￥{{totalPrice}}</text>
+     
+             <button class="js">结算</button>
+         
+           
+        </view>
+    </view>
+    <view wx:else>
+        <view class="cart-no-data">购物车是空的哦~</view>
+    </view>
+</view>

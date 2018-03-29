@@ -1,0 +1,22 @@
+<view class = "item" wx:for="{{list}}"  bindtap="toCleanOrder" data-index="{{item.index}}" data-id="{{item.id}}" data-name="{{item.name}}" data-tel="{{item.tel}}"   data-bm="{{item.bm}}"data-image="{{item.image}}"  data-door="{{item.door}}" data-region="{{item.region}}">
+
+<view class = "info">
+ <input type="hide" class="bms">{{item.bm}}</input>
+<text class="xm">{{item.name}}</text>
+
+<text class="dh">{{item.tel}}</text>
+<view class="dz">{{item.region}}{{item.door}}</view>
+</view>
+<view class = "modify" bindtap="tiaozhuan" data-item="{{item}}"data-index="{{item.index}}" data-id="{{item.id}}" data-name="{{item.name}}" data-tel="{{item.tel}}"  data-bm="{{item.bm}}"data-image="{{item.image}}" data-door="{{item.door}}"data-region="{{item.region}}">
+ <image src = "../../images/ico/modify.png"
+    mode = "widthFix" bindtap = "detete"/> 
+</view>
+</view>
+
+<view class = "add" bindtap = "addAddre">
+	 <image  class = "left"src = "../../images/ico/6.png"
+    mode = "widthFix" /> 
+    <view class = "text">新增个人地址</view>
+     <image class="right" src = "../../images/ico/right.png"
+    mode = "widthFix" /> 
+</view>

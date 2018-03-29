@@ -1,0 +1,155 @@
+.zynr {
+  background-color: #eee;
+}
+
+swiper-item image {
+  width: 100%;
+}
+
+.bjlg {
+  width: 100%;
+  position: relative;
+}
+
+.bjtp image {
+  width: 100%;
+}
+
+.dptp image {
+  width: 100%;
+}
+
+.bjlg .tcyy {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 5;
+}
+
+.bjlg .dpnr {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  -webkit-box-align: end;
+  padding: 10rpx;
+  z-index: 10;
+}
+
+.bjlg .dptp {
+  width: 20%;
+  height: 4.5rem;
+  overflow: hidden;
+}
+
+.bjlg .dptp image {
+  width: 100%;
+}
+
+.bjlg .dpmc {
+  padding-left: 20rpx;
+  margin-bottom: 15rpx;
+}
+
+.dpmc text {
+  font-size: 15px;
+  color: white;
+}
+
+.dpmc image {
+  width: 15px;
+  height: 15px;
+  margin-left: 1rpx;
+}
+
+/*滚动条开始  */
+
+.gdt {
+  white-space: nowrap;
+  display: flex;
+}
+
+.gdt .gdnr {
+  background: #cdcdcd;
+  width: 80px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  line-height: 40px;
+}
+
+/*商品展示开始*/
+.bttitss{
+  margin-top: 5px;
+  margin-left: 10px;
+  text-align: left;
+}
+.zxq {
+  display: flex;
+  float:left;
+  width:50%;
+  margin-top: 1rem;
+
+}
+
+.zxq  .imgsss {
+  width: 94%;
+  margin-left: 3%; 
+}
+
+.wznr{
+  margin-left: 30rpx;
+ 
+}
+.wznr .wznrtxt {
+  font-size: 15px;
+}
+
+.zxq .zspjg {
+  margin-bottom: 10rpx;
+  font-size: 15px;
+  margin-left: 30rpx;
+  color: red;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rpx;
+}
+
+.zxq .gmjg {
+  color: #999;
+  font-size: 13px;
+  margin-right:20px;
+  margin-top: 2px;
+
+}
+/*商品展示结束*/
+
+/*  */
+
+/* .fliexBox{
+width: 100rpx;
+height: 50rpx;
+background-color: #5db13b;
+color: #ffffff;
+text-align: center;
+position: fixed;
+right: 0rpx;
+bottom: 85rpx;
+border-radius: 20rpx 0rpx 0rpx 20rpx;
+font-size: 26rpx;
+line-height: 50rpx;
+opacity: .6;
+}
+.callOur{
+bottom: 20rpx;
+}
+contact-button{
+opacity: 0;
+position: absolute;
+} */

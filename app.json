@@ -1,0 +1,46 @@
+{
+		
+	"pages":[
+           
+	         "pages/index/index",
+	         "pages/logs/logs",
+          "pages/details/details",
+          "pages/merchant/merchant",
+          "pages/shopdp/shopdp",
+          "pages/shopms/shopms",
+          "pages/shouhuo/shouhuo",
+          "pages/gouwu/gouwu",
+            "pages/cleanOrder/cleanOrder",
+            "pages/shdz/shdz",
+            "pages/chooseAddre/chooseAddre",
+            "pages/modifyAddre/modifyAddre",
+          "pages/newAddre/newAddre",
+            "pages/indexsd/indexsd"
+	         ],
+	         
+	         "window": {
+            "navigationBarBackgroundColor": "#ffffff",
+            "navigationBarTextStyle": "black",
+            "navigationBarTitleText": "锦艺搜布",
+            "backgroundColor": "#cdcdcd",
+            "backgroundTextStyle": "#cdcdcd"
+          },
+	       
+	         "tabBar": {
+	        	    "color":"#f46969",
+	        	    "list": [{
+	        	      "iconPath":"images/ico/index-Gray.png",
+	        	      "selectedIconPath":"images/ico/index-Red.png",
+	        	      "pagePath": "pages/index/index",
+	        	      "text": "店铺"
+	        	    }, {
+	        	        "iconPath":"images/ico/find-Gray.png",
+	        	        "selectedIconPath":"images/ico/find-Red.png",
+	        	      "pagePath": "pages/logs/logs",
+	        	      "text": "我的"
+	        	    }]
+	        	  },
+
+            "debug": true 
+					
+}

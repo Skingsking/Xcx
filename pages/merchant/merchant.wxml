@@ -1,0 +1,15 @@
+<view class="sprz">
+<image src="http://www.jinyisoubu.com/images/10/5d/42/09504e9deeba8a03ec136ac9d8fb698d2b7d4afb.jpg"mode="widthFix"></image>
+<image src="http://www.jinyisoubu.com/images/df/30/9c/2f805e72a7919558adacbd04df9d3d2fb79d5479.jpg"mode="widthFix"></image>
+<image src="http://www.jinyisoubu.com/images/9c/90/7c/dfe37de54535cb001ed79327bfd02fe974dcb618.jpg"mode="widthFix"></image>
+<image src="http://www.jinyisoubu.com/images/67/7a/e1/8f09b29bd6743285fe01f6017f38954e66098f5a.jpg"mode="widthFix"></image>
+<image src="http://www.jinyisoubu.com/images/0c/31/15/8b596a6cccbf65cb9b816660bf173fd0eaeffd67.jpg"mode="widthFix"></image>
+<image src="http://www.jinyisoubu.com/images/c2/1c/95/54392aff1bce19d2b93c2c907360fe2e8d77143b.jpg"mode="widthFix"></image>
+<image src="http://www.jinyisoubu.com/images/e4/2a/60/b8b7ed851cd27e8fae3ba0cc393b5d115f1af0d4.jpg"mode="widthFix"></image>
+<image src="http://www.jinyisoubu.com/images/fc/3e/f4/f1b074e6ef98117547e5bf003be59b23749b9cba.jpg"mode="widthFix"></image>
+<image src="http://www.jinyisoubu.com/images/39/73/5c/de57eff5151273f195b0f5e8dac70d08f4b20f5c.jpg"mode="widthFix"></image>
+<image src="http://www.jinyisoubu.com/images/e6/3e/b1/e17e324331b993eca424ee9e56f051b6d1c5b880.jpg"mode="widthFix"></image>
+<image src="http://www.jinyisoubu.com/images/e6/3e/b1/e17e324331b993eca424ee9e56f051b6d1c5b880.jpg"mode="widthFix"></image>
+<span style="font-size:24px;"><!--navigatort.wxml-->    
+<view style="text-align:center"> {{title}} </view></span>  
+</view>
